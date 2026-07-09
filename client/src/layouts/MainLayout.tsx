@@ -1,18 +1,22 @@
 import type { ReactNode } from "react"
 import Navbar from "../components/layout/Navbar"
+import Footer from "../components/layout/Footer"
+
 interface MainLayoutProps {
   children: ReactNode
 }
 
 function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen bg-page">
-      <div className="bg-brand-plum p-5 font-bold text-white">
-        Layout is working
-      </div>
+    <>
+      <Navbar />
 
-      <main>{children}</main>
-    </div>
+      <main>
+        {children}
+      </main>
+
+      <Footer />
+    </>
   )
 }
 
