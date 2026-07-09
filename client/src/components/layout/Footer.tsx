@@ -1,14 +1,10 @@
 import {
   ArrowRight,
   ChefHat,
-  Facebook,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitter,
 } from "lucide-react"
 
 const footerLinks = {
@@ -41,12 +37,12 @@ function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-ink text-white">
-      {/* Decorative background */}
+      {/* Background Effects */}
       <div className="pointer-events-none absolute -left-40 top-0 h-96 w-96 rounded-full bg-brand-berry/10 blur-3xl" />
 
       <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-brand-coral/10 blur-3xl" />
 
-      {/* Newsletter */}
+      {/* Newsletter Section */}
       <div className="relative border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
@@ -57,7 +53,10 @@ function Footer() {
 
               <h2 className="mt-3 max-w-xl text-3xl font-black tracking-tight sm:text-4xl">
                 Fresh deals and food discoveries,
-                <span className="text-brand-gold"> delivered to your inbox.</span>
+                <span className="text-brand-gold">
+                  {" "}
+                  delivered to your inbox.
+                </span>
               </h2>
             </div>
 
@@ -100,7 +99,7 @@ function Footer() {
       {/* Main Footer */}
       <div className="relative mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_0.8fr_1fr]">
-          {/* Brand */}
+          {/* Brand Column */}
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-coral to-brand-berry shadow-lg">
@@ -116,49 +115,52 @@ function Footer() {
             </div>
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/55">
-              Discover restaurants, explore dishes, and order what matches your
-              moment. FoodieXpress brings food discovery and ordering into one
-              simple web-first experience.
+              Discover restaurants, explore dishes, and order what matches
+              your moment. FoodieXpress brings food discovery and ordering
+              into one simple web-first experience.
             </p>
 
-            {/* Contact */}
+            {/* Contact Information */}
             <div className="mt-6 space-y-3 text-sm text-white/55">
               <div className="flex items-center gap-3">
-                <MapPin size={17} className="text-brand-coral" />
-                Hyderabad, Telangana
+                <MapPin
+                  size={17}
+                  className="text-brand-coral"
+                />
+
+                <span>
+                  Hyderabad, Telangana
+                </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Mail size={17} className="text-brand-coral" />
-                support@foodiexpress.demo
+                <Mail
+                  size={17}
+                  className="text-brand-coral"
+                />
+
+                <span>
+                  support@foodiexpress.demo
+                </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone size={17} className="text-brand-coral" />
-                Customer support
+                <Phone
+                  size={17}
+                  className="text-brand-coral"
+                />
+
+                <span>
+                  Customer Support
+                </span>
               </div>
             </div>
 
-            {/* Socials */}
-            <div className="mt-7 flex gap-3">
-              {[Instagram, Facebook, Twitter, Linkedin].map(
-                (Icon, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    aria-label="Social media link"
-                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-brand-coral/50 hover:bg-brand-coral hover:text-white"
-                  >
-                    <Icon size={17} />
-                  </button>
-                ),
-              )}
-            </div>
           </div>
 
-          {/* Explore */}
+          {/* Explore Links */}
           <div>
-            <h3 className="font-black">
+            <h3 className="font-black text-white">
               Explore
             </h3>
 
@@ -181,9 +183,9 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company Links */}
           <div>
-            <h3 className="font-black">
+            <h3 className="font-black text-white">
               Company
             </h3>
 
@@ -201,9 +203,9 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Partners */}
+          {/* Partner Links */}
           <div>
-            <h3 className="font-black">
+            <h3 className="font-black text-white">
               For Partners
             </h3>
 
@@ -220,9 +222,9 @@ function Footer() {
               ))}
             </ul>
 
-            {/* Partner CTA */}
+            {/* Restaurant Partner CTA */}
             <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.05] p-4">
-              <p className="text-sm font-black">
+              <p className="text-sm font-black text-white">
                 Own a restaurant?
               </p>
 
@@ -235,6 +237,7 @@ function Footer() {
                 className="mt-3 flex items-center gap-2 text-xs font-black text-brand-gold"
               >
                 Join FoodieXpress
+
                 <ArrowRight size={14} />
               </button>
             </div>
